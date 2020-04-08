@@ -19,14 +19,14 @@
 class Sale {
 public:
     Sale();
-    Sale(std::string, double, short int);
+    Sale(std::string, double, int);
     void setname_articule(std::string);
     void setcost(double);
-    void setamount(short int);
+    void setamount(int);
     
     std::string getname_articule();
     double getcost();
-    short int getamount();
+    int getamount();
     double LiquidationSale();
     
     virtual ~Sale();
@@ -35,7 +35,7 @@ private:
     
     std::string name_articule;
     double cost;
-    short int amount;
+    int amount;
     double Calculatediscount();
 
 };

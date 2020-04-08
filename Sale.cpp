@@ -11,34 +11,32 @@
  * 
  * Created on 5 de abril de 2020, 11:20 PM
  */
-
-#include "Sale.h"
 #include<iostream>
 #include<string>
-
+#include "Sale.h"
 //FUNCION DEL ARCHIVO DE IMPLEMENTACION
 Sale::Sale() {
 }
 
-Sale::Sale(std::string namearticule, double cost, short int amount) {
-    this->name_articule = namearticule;
-    this->cost = cost;
-    this->amount = amount;
+Sale::Sale(std::string name_articule, double cost, int amount) {
+    setname_articule(name_articule);
+    setcost(cost);
+    setamount(amount);
 }
 
-void Sale::setname_articule(std::string name){
+void Sale::setname_articule(std::string name_articule){
     
-    Sale::name_articule = name;
+    this->name_articule = name_articule;
     
 }
 
 void Sale::setcost(double cost){
     
-    Sale::cost = cost;
+    this->cost = cost;
 } 
 
-void Sale::setamount(short int amount){
-    Sale::amount = amount;
+void Sale::setamount(int amount){
+    this->amount = amount;
 }
 
 std::string Sale::getname_articule(){
@@ -47,12 +45,31 @@ return name_articule;
 }
 
 double Sale::getcost(){
-    return 0;
+    return cost;
 }
 
-short int Sale::getamount(){
-    return 0;
+int Sale::getamount(){
+    return amount;
     
+}
+
+double Sale::LiquidationSale(){
+
+    return Calculatediscount();
+    
+}
+
+double Sale::Calculatediscount(){
+    
+    int valor = 0;
+    int descuento = 0;
+    
+    valor = getcost() * getamount();
+    descuento = valor - (valor * 0.2);
+    
+    
+    
+    return descuento;
 }
 
 Sale::~Sale() {
