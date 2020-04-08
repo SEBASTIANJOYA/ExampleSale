@@ -13,18 +13,45 @@
  */
 
 #include "Sale.h"
-
+#include<iostream>
+#include<string>
 
 //FUNCION DEL ARCHIVO DE IMPLEMENTACION
 Sale::Sale() {
 }
 
-Sale::Sale(const Sale& orig) {
+Sale::Sale(std::string namearticule, double cost, short int amount) {
+    this->name_articule = namearticule;
+    this->cost = cost;
+    this->amount = amount;
 }
 
-void::Sale::getname_articule(std::string name){
+void Sale::setname_articule(std::string name){
     
-    name_articule = name;
+    Sale::name_articule = name;
+    
+}
+
+void Sale::setcost(double cost){
+    
+    Sale::cost = cost;
+} 
+
+void Sale::setamount(short int amount){
+    Sale::amount = amount;
+}
+
+std::string Sale::getname_articule(){
+
+return name_articule;    
+}
+
+double Sale::getcost(){
+    return 0;
+}
+
+short int Sale::getamount(){
+    return 0;
     
 }
 

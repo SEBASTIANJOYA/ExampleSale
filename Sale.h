@@ -19,7 +19,7 @@
 class Sale {
 public:
     Sale();
-    Sale(const Sale& orig);
+    Sale(std::string, double, short int);
     void setname_articule(std::string);
     void setcost(double);
     void setamount(short int);
