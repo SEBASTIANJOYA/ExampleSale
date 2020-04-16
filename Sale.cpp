@@ -7,17 +7,19 @@
 
 /* 
  * File:   Sale.cpp
- * Author: MIGUEL
+ * Author: JOHANN SEBASTIAN JOYA BELTRAN
+ * 201711476
  * 
  * Created on 5 de abril de 2020, 11:20 PM
  */
-#include<iostream>
 #include<string>
 #include "Sale.h"
+
 //FUNCION DEL ARCHIVO DE IMPLEMENTACION
 Sale::Sale() {
 }
 
+//Implemetancion del constructor de la clase.
 Sale::Sale(std::string name_articule, double cost, int amount) {
     setname_articule(name_articule);
     setcost(cost);

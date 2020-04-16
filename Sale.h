@@ -6,20 +6,23 @@
 
 /* 
  * File:   Sale.h
- * Author: MIGUEL
- *
+ * Author: JOHANN SEBASTIAN JOYA
+ * 201711476.
  * Created on 5 de abril de 2020, 11:20 PM
  */
 
 #ifndef SALE_H
 #define SALE_H
-#include<iostream>
 #include<string>
+
 //FUNCIONANMIENTO DE ARCHIVO DE CABECERA
 class Sale {
 public:
     Sale();
-    Sale(std::string, double, int);
+    Sale(std::string, double, int); //Constructor.
+    
+    //Metodos GET y SET.
+    
     void setname_articule(std::string);
     void setcost(double);
     void setamount(int);
@@ -27,12 +30,15 @@ public:
     std::string getname_articule();
     double getcost();
     int getamount();
+    
+    //Declaracion del Metodo para liquidar la cuenta.
     double LiquidationSale();
     
     virtual ~Sale();
     
 private:
     
+    //Declaracion de los atributos a utilizar
     std::string name_articule;
     double cost;
     int amount;
